@@ -10,7 +10,7 @@ env:
 script:
 - docker login -u $DOCKER_USER -p $DOCKER_PASS
 - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
-- export IMAGE_NAME="meinjens/docToolchain"
+- export IMAGE_NAME="meinjens/doctoolchain"
 - docker build -t $IMAGE_NAME:$TRAVIS_COMMIT .
 - docker tag $IMAGE_NAME:$TRAVIS_COMMIT $IMAGE_NAME:$TAG
 - docker push $IMAGE_NAME
