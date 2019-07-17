@@ -1,0 +1,6 @@
+Docker for docToolchain
+=======================
+
+= Usage
+
+docker run -v <project path or $(pwd)>:/project doctoolchain:latest
